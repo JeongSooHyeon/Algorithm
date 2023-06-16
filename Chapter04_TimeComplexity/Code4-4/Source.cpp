@@ -11,14 +11,14 @@ vector<double> movingAverage2(const vector<double>& a, int m) {
 	vector<double> ret;
 	int n = a.size();
 	double partialSum = 0;
-	for (int i = 0; i < m-1; ++i) {	// 0~m-2(m-1개)
+	for (int i = 0; i < m-1; ++i) {	// 0~m-2(m-1개) // 0 1
 		partialSum += a[i];
 	}
 
 	for (int j = m-1; j < n; ++j) {
-		partialSum += a[j];
+		partialSum += a[j];	// m 더해
 		ret.push_back(partialSum / m);
-		partialSum -= a[j - m + 1];
+		partialSum -= a[j - m + 1];	// 0 빼기
 	}
 	return ret;
 }
