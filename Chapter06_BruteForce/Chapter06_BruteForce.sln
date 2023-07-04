@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33214.272
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Code6-1", "Code6-1\Code6-1.vcxproj", "{F06BE328-72D2-49D9-8951-1EF10D7FFC9D}"
 EndProject
@@ -26,6 +26,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Code6-7_TSP", "Code6-7_TSP\Code6-7_TSP.vcxproj", "{9A5D86C4-4B03-4849-9555-2C85F492E8CE}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Code6-8_ClockSync", "Code6-8_ClockSync\Code6-8_ClockSync.vcxproj", "{5D99A39C-6AA5-4BFF-B27E-AF51E8A00A0E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Code6-7_TSP_Review", "Code6-7_TSP_Review\Code6-7_TSP_Review.vcxproj", "{0125D686-00FF-4192-89E9-F75CC355F12A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Permutation", "Permutation\Permutation.vcxproj", "{B6ADEBB5-07CB-4DD1-9FCE-354766888D67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -131,6 +135,22 @@ Global
 		{5D99A39C-6AA5-4BFF-B27E-AF51E8A00A0E}.Release|x64.Build.0 = Release|x64
 		{5D99A39C-6AA5-4BFF-B27E-AF51E8A00A0E}.Release|x86.ActiveCfg = Release|Win32
 		{5D99A39C-6AA5-4BFF-B27E-AF51E8A00A0E}.Release|x86.Build.0 = Release|Win32
+		{0125D686-00FF-4192-89E9-F75CC355F12A}.Debug|x64.ActiveCfg = Debug|x64
+		{0125D686-00FF-4192-89E9-F75CC355F12A}.Debug|x64.Build.0 = Debug|x64
+		{0125D686-00FF-4192-89E9-F75CC355F12A}.Debug|x86.ActiveCfg = Debug|Win32
+		{0125D686-00FF-4192-89E9-F75CC355F12A}.Debug|x86.Build.0 = Debug|Win32
+		{0125D686-00FF-4192-89E9-F75CC355F12A}.Release|x64.ActiveCfg = Release|x64
+		{0125D686-00FF-4192-89E9-F75CC355F12A}.Release|x64.Build.0 = Release|x64
+		{0125D686-00FF-4192-89E9-F75CC355F12A}.Release|x86.ActiveCfg = Release|Win32
+		{0125D686-00FF-4192-89E9-F75CC355F12A}.Release|x86.Build.0 = Release|Win32
+		{B6ADEBB5-07CB-4DD1-9FCE-354766888D67}.Debug|x64.ActiveCfg = Debug|x64
+		{B6ADEBB5-07CB-4DD1-9FCE-354766888D67}.Debug|x64.Build.0 = Debug|x64
+		{B6ADEBB5-07CB-4DD1-9FCE-354766888D67}.Debug|x86.ActiveCfg = Debug|Win32
+		{B6ADEBB5-07CB-4DD1-9FCE-354766888D67}.Debug|x86.Build.0 = Debug|Win32
+		{B6ADEBB5-07CB-4DD1-9FCE-354766888D67}.Release|x64.ActiveCfg = Release|x64
+		{B6ADEBB5-07CB-4DD1-9FCE-354766888D67}.Release|x64.Build.0 = Release|x64
+		{B6ADEBB5-07CB-4DD1-9FCE-354766888D67}.Release|x86.ActiveCfg = Release|Win32
+		{B6ADEBB5-07CB-4DD1-9FCE-354766888D67}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
