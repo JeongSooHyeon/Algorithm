@@ -8,18 +8,19 @@ void Print(vector<int>& v) {
 	cout << endl;
 }
 
-void allPermutation(int n, vector<int>& v, vector<bool>& visited) {
-	for (int i = n-1; i >= 0; --i) {
+void allCombination(int n, vector<int>& v, vector<bool>& visited) {
+	if (v.size() == n)
+		Print(v);
+	for (int i = 0; i < n; ++i) {
 		if (visited[i])
 			continue;
 		v.push_back(i);
 		visited[i] = true;
-		allPermutation(n, v, visited);
+		allCombination(n, v, visited);
 		visited[i] = false;
 		v.pop_back();
 	}
-		if(v.size() ==n)
-			Print(v);
+
 }
 
 int main() {
@@ -28,5 +29,5 @@ int main() {
 	vector<int> v;
 	vector<bool> visited(n, false);
 
-	allPermutation(n, v, visited);
+	allCombination(n, v, visited);
 }
