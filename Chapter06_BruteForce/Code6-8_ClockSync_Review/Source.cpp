@@ -2,37 +2,31 @@
 #include <vector>
 using namespace std;
 
-const int INF = 9999;
+const int INF = 9999, SWITCHES = 10, CLOCKS = 16;
 
-// 한 조각 : 스위치 몇 번 누를지
-// 스위치는 4번 돌리면 처음으로 돌아옴 0~3
-// 스위치에 연결된 시계들, 누른 스위치
-bool isFinish(vector<int>& clocks);
-void push(vector<int>& clocks, int swtch);
+const char linked[SWITCHES][CLOCKS + 1] = {
+	"xxx.............",
+	"...x...x.x.x....",
+	"....x.....x...xx",
+	"x...xxxx........",
+	"......xxx.x.x...",
+	"x.x...........xx",
+	"...x..........xx",
+	"....xx.x......xx",
+	".xxxxx..........",
+	"...xxx...x...x.." };
 
-int solve(vector<int>& clocks, int swtch) {
-	// 기저 사례 : 스위치를 다 누름. 12시를 가리키는지 판단
-	if (swtch == 10) {	// 마지막 스위치야
-		return isFinish(clocks) ? 0 : INF;
-	}
 
-	int ret = INF;
-	for (int cnt = 0; cnt < 4; cnt++) {
-		ret = min(ret, cnt + solve(clocks, swtch + 1));
-		push(clocks, swtch);
-	}
-	return ret;
-}
+
 int main() {
-	int c;	// c <= 30
-	vector<int> clocks(16, -1);
-	vector<bool> swithces(10, false);
-	for (int i = 0; i < 16; i++) {
-		cin >> clocks[i];
+	int c;	// 테스트 케이스 (c <= 30)
+	cin >> c;
+
+	for (int i = 0; i < c; ++i) {
+		vector<int> clocks(16, -1);
+		for (int j = 0; j < clocks.size(); ++j) {
+			cin >> clocks[j];
+		}
+
 	}
-	solve(clocks);
-
-
-
-	return 0;
 }
