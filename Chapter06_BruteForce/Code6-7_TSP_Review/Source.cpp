@@ -9,7 +9,21 @@ double dist[MAX][MAX];	// 두 도시 간의 거리를 저장하는 배열
 
 
 double shortestPath(vector<int>& path, vector<bool>& visited, double currentLength) {
+	// 기저 사례 : 모든 경로를 다 돌았으면? 처음으로 돌아와
+	if (path.size() == n)
+		return currentLength + dist[path.back()][path[0]];
 
+	int ret = INF;
+	for (int i = 0; i < n; ++i) {
+		if (visited[i])
+			continue;
+		int here = path.back();
+		path.push_back(i);
+		visited[i] = true;
+		ret = min(ret, (int)shortestPath(path, visited, currentLength + dist[here][i]));
+		visited[i] = false;
+		path.pop_back();
+	}
 }
 
 int main() {
