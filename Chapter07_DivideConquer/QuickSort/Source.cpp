@@ -1,33 +1,35 @@
 #include <iostream>
 using namespace std;
 
-void swap(int& a, int& b) {
-	int temp = a;
-	a = b;
-	b = temp;
-}
-
-void QuickSort(int array[], int left, int right) {
-	if (left >= right)
+void quickSort(int array[], int start, int end) {
+	if (start >= end) {	// 원소가 1개일 때
 		return;
+	}
 
-	int pivot = right;	// 제일 마지막에 있는 값 
-	int low = left;
-	int high = right - 1;
+	int pivot = start;
+	int low = pivot + 1;	// 왼쪽 출발 지점
+	int high = end;		// 오른쪽 출발 지점
+	int temp;
 
-	while (true) {
-		while (array[pivot] >= array[low] && low <= right)	// 왼쪽에서 피벗보다 큰 값을 찾는다
+	while (low <= high) {	// 포인터가 엇갈릴 때까지 반복
+		while (low <= end && array[low] <= array[pivot])
 			low++;
-		while (array[pivot] < array[high] && high >= left)	// 오른쪽에서 피벗보다 작은 값을 찾는다
+		while (high > start && array[high] >= array[pivot])
 			high--;
 
-		if (low >= high)	// 인덱스 만나면 끝
-			break;
-
-		swap(array[low], array[high]);		// 피벗 기준 큰 값, 작은 값 스왑
+		if (low > high) {	// 엇갈림, pivot의 좌측은 pivot보다 작은 값들, 우측은 큰 값들만 존재하게 됨
+			temp = array[high];
+			array[high] = array[pivot];
+			array[pivot] = temp;
+		}
+		else {			// i번째와 j번째 스왑
+			temp = array[low];
+			array[low] = array[high];
+			array[high] = temp;
+		}
 	}
-	swap(array[low], array[pivot]);	// 피벗의 위치 중앙으로, 피벗은 정렬된 위치
 
-	QuickSort(array, left, low - 1);	// 왼쪽 정렬
-	QuickSort(array, low + 1, right);	// 오른쪽 정렬
+	// 분할 계산, pivot을 중심으로 나눔
+	quickSort(array, start, high - 1);
+	quickSort(array, high + 1, end);
 }
