@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ex7-3_Multiply", "Ex7-3_Mul
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ex7-4_Karatsuba", "Ex7-4_Karatsuba\Ex7-4_Karatsuba.vcxproj", "{05AA0A01-7F1B-447E-B6DB-B8130CCE693A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ex7-5_QuadTree", "Ex7-5_QuadTree\Ex7-5_QuadTree.vcxproj", "{3470DE4C-9BC8-425F-A71A-B018F611916C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{05AA0A01-7F1B-447E-B6DB-B8130CCE693A}.Release|x64.Build.0 = Release|x64
 		{05AA0A01-7F1B-447E-B6DB-B8130CCE693A}.Release|x86.ActiveCfg = Release|Win32
 		{05AA0A01-7F1B-447E-B6DB-B8130CCE693A}.Release|x86.Build.0 = Release|Win32
+		{3470DE4C-9BC8-425F-A71A-B018F611916C}.Debug|x64.ActiveCfg = Debug|x64
+		{3470DE4C-9BC8-425F-A71A-B018F611916C}.Debug|x64.Build.0 = Debug|x64
+		{3470DE4C-9BC8-425F-A71A-B018F611916C}.Debug|x86.ActiveCfg = Debug|Win32
+		{3470DE4C-9BC8-425F-A71A-B018F611916C}.Debug|x86.Build.0 = Debug|Win32
+		{3470DE4C-9BC8-425F-A71A-B018F611916C}.Release|x64.ActiveCfg = Release|x64
+		{3470DE4C-9BC8-425F-A71A-B018F611916C}.Release|x64.Build.0 = Release|x64
+		{3470DE4C-9BC8-425F-A71A-B018F611916C}.Release|x86.ActiveCfg = Release|Win32
+		{3470DE4C-9BC8-425F-A71A-B018F611916C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
