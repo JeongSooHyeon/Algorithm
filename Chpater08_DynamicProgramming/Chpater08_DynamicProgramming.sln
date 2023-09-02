@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cde8-2_Mimoization-Bino", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cdoe8-3_Mamozation-Example", "Cdoe8-3_Mamozation-Example\Cdoe8-3_Mamozation-Example.vcxproj", "{D8F5DC68-1B3C-4A7A-B124-90F7EE6E9553}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Code8-4_Recursion", "Code8-4_Recursion\Code8-4_Recursion.vcxproj", "{55B9116A-F47D-4E22-B4E6-1E7B596D5BF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{D8F5DC68-1B3C-4A7A-B124-90F7EE6E9553}.Release|x64.Build.0 = Release|x64
 		{D8F5DC68-1B3C-4A7A-B124-90F7EE6E9553}.Release|x86.ActiveCfg = Release|Win32
 		{D8F5DC68-1B3C-4A7A-B124-90F7EE6E9553}.Release|x86.Build.0 = Release|Win32
+		{55B9116A-F47D-4E22-B4E6-1E7B596D5BF0}.Debug|x64.ActiveCfg = Debug|x64
+		{55B9116A-F47D-4E22-B4E6-1E7B596D5BF0}.Debug|x64.Build.0 = Debug|x64
+		{55B9116A-F47D-4E22-B4E6-1E7B596D5BF0}.Debug|x86.ActiveCfg = Debug|Win32
+		{55B9116A-F47D-4E22-B4E6-1E7B596D5BF0}.Debug|x86.Build.0 = Debug|Win32
+		{55B9116A-F47D-4E22-B4E6-1E7B596D5BF0}.Release|x64.ActiveCfg = Release|x64
+		{55B9116A-F47D-4E22-B4E6-1E7B596D5BF0}.Release|x64.Build.0 = Release|x64
+		{55B9116A-F47D-4E22-B4E6-1E7B596D5BF0}.Release|x86.ActiveCfg = Release|Win32
+		{55B9116A-F47D-4E22-B4E6-1E7B596D5BF0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
