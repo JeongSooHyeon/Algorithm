@@ -5,7 +5,7 @@
 #include <vector>
 using namespace std;
 
-int cache[101][101];	// -1:답이 계산되지 않음, 1:입력들이 서로 대응됨, 0:입력들이 서로 대응되지 않음
+int cache2[101][101];	// -1:답이 계산되지 않음, 1:입력들이 서로 대응됨, 0:입력들이 서로 대응되지 않음
 
 // 패턴과 문자열
 string W, S;
@@ -13,7 +13,7 @@ string W, S;
 // 와일드카드 패턴 W[w..]가 문자열 S[s..]에 대응되는지 여부를 반환
 int matchMemoized(int w, int s) {	// 두 문자열의 시작 위치
 	// 메모이제이션
-	int& ret = cache[w][s];
+	int& ret = cache2[w][s];
 	if (ret != -1)
 		return ret;
 

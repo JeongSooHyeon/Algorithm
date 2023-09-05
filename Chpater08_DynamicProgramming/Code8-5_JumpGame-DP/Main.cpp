@@ -12,7 +12,7 @@ int n = 7, board[100][100] = {
 	{4,1,2,3,4,1,2},
 	{3,3,1,2,3,4,1},
 	{1,5,2,9,4,7,0} };
-int cache[100][100];
+int cache2[100][100];
 int jump2(int y, int x) {
 	// 기저 사례 처리
 	if (y >= n || x >= n)	// 범위를 벗어남
@@ -21,7 +21,7 @@ int jump2(int y, int x) {
 		return 1;
 
 	// 메모제이션
-	int& ret = cache[y][x];
+	int& ret = cache2[y][x];
 	if(ret != -1)
 		return ret;
 
@@ -30,7 +30,7 @@ int jump2(int y, int x) {
 }
 
 int main() {
-	memset(cache, -1, sizeof(cache));
+	memset(cache2, -1, sizeof(cache2));
 
 	cout << jump2(0, 0) << endl;
 
