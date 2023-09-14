@@ -11,7 +11,7 @@ int connected[51][51], deg[51];
 double search3(int here, int days) {
 	// 기저 사례 : 0일째
 	if (days == 0)
-		return (here == q ? 1.0 : 0.0);
+		return (here == p ? 1.0 : 0.0);
 
 	// 메모이제이션
 	double& ret = cache[here][days];
@@ -21,7 +21,7 @@ double search3(int here, int days) {
 	ret = 0.0;
 	for (int there = 0; there < n; there++) {
 		if (connected[here][there])
-			ret += search3(there, days - 1) / deg[here];
+			ret += search3(there, days - 1) / deg[there];
 	}
 	return ret;
 }
@@ -39,6 +39,7 @@ int main() {
 
 	for (int i = 0; i < c; i++) {
 		cin >> n >> d >> p;
+		memset(cache, -1, sizeof(cache));
 		memset(deg, 0, sizeof(deg));
 		for (int j = 0; j < n; j++) {
 			for (int k = 0; k < n; k++) {
@@ -48,17 +49,13 @@ int main() {
 			}
 		}
 		cin >> t;
-			memset(cache, -1, sizeof(cache));
+		for (int j = 0; j < t; j++) {
 			cin >> q;
 			vector<int> path(1, p);
 			cout << fixed;
 			cout.precision(8);
 			cout << "모스 " << search3(q, d) << ' ';
-			for (int j = 0; j < t-1; j++) {
-				cin >> q;
-				cout << "모스 " << search3(q, d) << ' ';
-			}
-
+		}
 		cout << endl;
 
 	}
