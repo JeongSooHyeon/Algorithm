@@ -1,9 +1,6 @@
 /*
 최대 증가 부분 수열을 실제로 계산하기
 */
-/*
-최대 증가 부분 수열 문제를 해결하는 동적 계획법 알고리즘(2)
-*/
 #include <iostream>
 #include <vector>
 using namespace std;
