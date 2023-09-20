@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-int n, m;
+int n, m;	// 검사한 문장의 단어의 수 1<=n<=100, 원문에 출현할 수 있는 단어의 수
 // 분류기가 반환한 문장. 단어 번호로 변환되어 있음
 int R[100];
 // T[i][j] = i 단어 이후에 j 단어가 나올 확률의 로그값
@@ -13,21 +13,31 @@ double T[501][501];
 double M[501][502];
 int choice[102][502];
 double cache[102][502];	// 1로 초기화
+double B[501];	// 해당 단어가 첫단어로 올 확률
 
 
 // Q[segment] 이후를 채워서 얻을 수 있는 최대 g() 곱의 로그값을 반환
 // Q[segment-1] == previousMatch라고 가정
 double recognize(int segment, int previousMatch) {
+	// 기저 사례 : 문장 끝까지 검사
 	if (segment == n)	return 0;
+
+	// 메모이제이션
 	double& ret = cache[segment][previousMatch];
 	if (ret != 1.0)	return ret;
 
+	// -1인 경우
+	//if (previousMatch == -1) {
+	//	return ret = B[segment];
+	//}
 	ret = -1e200;	// log(0) = 음의 무한대에 해당하는 값
 	int& choose = choice[segment][previousMatch];
 
+	int thisMatch = 0;
 	// R[segment]에 대응되는 단어를 찾는다.
-	for (int thisMatch = 0; thisMatch < m; thisMatch++) {
-		// g(thisMatch) = T(previousMatch, thisMatch) * M(thisMatch, R[segment]
+	for (thisMatch = 0; thisMatch < m; thisMatch++) {
+		// g(thisMatch) = T(previousMatch, thisMatch) * M(thisMatch, R[segment])
+		// 이전 단어의 다음으로 현 단어일 확률 * 원래 단어를 변환된 단어로 분류할 확률
 		double cand = T[previousMatch][thisMatch] + M[thisMatch][R[segment]] + recognize(segment + 1, thisMatch);
 
 		if (ret < cand) {
@@ -35,7 +45,7 @@ double recognize(int segment, int previousMatch) {
 			choose = thisMatch;
 		}
 	}
-	return ret;
+	return B[0] + ret;
 }
 
 // 입력받은 단어들의 목록
@@ -49,13 +59,12 @@ string reconstruct(int segment, int previousMatch) {
 }
 
 int main() {
-	int m;	// 원문에 출현할 수 있는 단어의 수 1<=m<=500
+	//int m;	// 원문에 출현할 수 있는 단어의 수 1<=m<=500
 	int q;	// 처리해야 할 문장의 수 1<=q<=100
 	cin >> m >> q;
-	string words[500];
-	double B[500];
+	
 	for (int i = 0; i < m; i++) {
-		cin >> words[i];
+		cin >> corpus[i];
 	}
 	for (int i = 0; i < m; i++) {
 		cin >> B[i];	// i번 단어가 첫 단어로 출현할 확률
@@ -71,10 +80,24 @@ int main() {
 		}
 	}
 
-	int n;	// 단어의 수 1<=n<=100
-	
+	string temp;
 	for (int i = 0; i < q; i++) {
 		cin >> n;
+		for (int j = 0; j < n; j++) {
+			cin >> temp;
+			for (int k = 0; k < m; k++) {
+				if (temp == corpus[k]) {
+					R[j] = k;
+					break;
+				}
+			}
+		}
 
+		fill(&cache[0][0], &cache[0][0]+102*502, (double)1.0);
+		//recognize(1, 0);
+		recognize(0, -1);
+		
+		cout << reconstruct(0, -1) << " ";
+		cout << endl;
 	}
 }
