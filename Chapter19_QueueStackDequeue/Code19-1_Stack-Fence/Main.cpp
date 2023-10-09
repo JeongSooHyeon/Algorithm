@@ -30,3 +30,8 @@ int solveStack() {
 	}
 	return ret;
 }
+
+int main() {
+	h.push_back(2);
+	cout << solveStack();
+}
