@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Code21-1_TreeNodeObject", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Code21-4_Traversal", "Code21-4_Traversal\Code21-4_Traversal.vcxproj", "{03C02604-C226-4CB0-8D86-FA5912A60F64}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Code21-5_Fortress", "Code21-5_Fortress\Code21-5_Fortress.vcxproj", "{E9D2F120-C9CB-4592-B431-283B51C5995E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{03C02604-C226-4CB0-8D86-FA5912A60F64}.Release|x64.Build.0 = Release|x64
 		{03C02604-C226-4CB0-8D86-FA5912A60F64}.Release|x86.ActiveCfg = Release|Win32
 		{03C02604-C226-4CB0-8D86-FA5912A60F64}.Release|x86.Build.0 = Release|Win32
+		{E9D2F120-C9CB-4592-B431-283B51C5995E}.Debug|x64.ActiveCfg = Debug|x64
+		{E9D2F120-C9CB-4592-B431-283B51C5995E}.Debug|x64.Build.0 = Debug|x64
+		{E9D2F120-C9CB-4592-B431-283B51C5995E}.Debug|x86.ActiveCfg = Debug|Win32
+		{E9D2F120-C9CB-4592-B431-283B51C5995E}.Debug|x86.Build.0 = Debug|Win32
+		{E9D2F120-C9CB-4592-B431-283B51C5995E}.Release|x64.ActiveCfg = Release|x64
+		{E9D2F120-C9CB-4592-B431-283B51C5995E}.Release|x64.Build.0 = Release|x64
+		{E9D2F120-C9CB-4592-B431-283B51C5995E}.Release|x86.ActiveCfg = Release|Win32
+		{E9D2F120-C9CB-4592-B431-283B51C5995E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
